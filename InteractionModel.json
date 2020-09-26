@@ -1,0 +1,793 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "tagebuch",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ErhalteAufgenommeneKalorienIntent",
+                    "slots": [
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "am {Zeitpunkt}",
+                                "vom {Zeitpunkt}",
+                                "{Zeitpunkt}",
+                                "für den {Zeitpunkt}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "wie viele kalorien habe ich zu mir genommen",
+                        "wie viele kalorien habe ich gegessen",
+                        "gegessene kalorien",
+                        "bei wie vielen kalorien bin ich {Zeitpunkt}",
+                        "wie viele kalorien habe ich {Zeitpunkt} gegessen",
+                        "{Zeitpunkt} gegessene Kalorien",
+                        "wie viele Kalorien habe ich am {Zeitpunkt} gegessen"
+                    ]
+                },
+                {
+                    "name": "ErhalteKalorienbedarfIntent",
+                    "slots": [],
+                    "samples": [
+                        "wie war nochmal mein tagesbedarf",
+                        "wie hoch ist mein Tagesbedarf",
+                        "Aus wie viel Kalorien besteht mein Tagesbedarf",
+                        "Was ist mein Tagesbedarf",
+                        "Tagesbedarf"
+                    ]
+                },
+                {
+                    "name": "HinzufuegenKalorienIntent",
+                    "slots": [
+                        {
+                            "name": "kcal",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{kcal} Kilokalorien",
+                                "{kcal} Kalorien",
+                                "{kcal}",
+                                "füge {kcal} hinzu"
+                            ]
+                        },
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "ich habge gerade {kcal} gegessen",
+                        "ich habe {kcal} Kalorien gegessen",
+                        "trage {kcal} ein",
+                        "füge {kcal} hinzu",
+                        "kannst du {kcal} kalorien hinzufügen",
+                        "kannst du {kcal} kalorien zu {Zeitpunkt} eintragen",
+                        "Ich habe {kcal} Kalorien heute gegessen kannst du das eintragen",
+                        "Kannst du {kcal} Kalorien zu {Zeitpunkt} hinzufügen",
+                        "{kcal} Kalorien zu {Zeitpunkt} hinzufügen",
+                        "füge {kcal} Kalorien hinzu"
+                    ]
+                },
+                {
+                    "name": "EmpfehleKalorienbedarfIntent",
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich wiege {Gewicht} Kilogramm",
+                                "ich wiege {Gewicht} Kilo",
+                                "ich wiege {Gewicht}",
+                                "{Gewicht} Kilogramm",
+                                "{Gewicht} Kilo",
+                                "{Gewicht}"
+                            ]
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich bin {Groesse} Zentimeter klein",
+                                "ich bin {Groesse} Zentimeter groß",
+                                "ich bin {Groesse} Meter klein",
+                                "ich bin {Groesse} Meter groß",
+                                "ich bin {Groesse} Zentimeter",
+                                "ich bin {Groesse} Meter",
+                                "{Groesse} Zentimeter",
+                                "{Groesse} Meter"
+                            ]
+                        },
+                        {
+                            "name": "Alter",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich bin {Alter} Jahre jung",
+                                "ich bin {Alter} Jahre alt",
+                                "ich bin {Alter} Jahre",
+                                "ich bin {Alter}",
+                                "{Alter} Jahre jung",
+                                "{Alter} Jahre alt",
+                                "{Alter} Jahre",
+                                "{Alter}"
+                            ]
+                        },
+                        {
+                            "name": "Geschlecht",
+                            "type": "GENDER",
+                            "samples": [
+                                "ich bin {Geschlecht}",
+                                "{Geschlecht}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Kannst du mir meinen Kalorienbedarf ausrechnen",
+                        "Kannst du mir meinen täglichen Kalorienbedarf ausrechnen",
+                        "was ist mein kalorienbedarf",
+                        "wie hoch ist mein täglicher Kalorienbedarf",
+                        "täglicher Kalorienbedarf",
+                        "rechne mir einen täglichen Kalorienbedarf aus",
+                        "rechne mir meinen Kalorienbedarf aus",
+                        "wie viele Kalorien brauche ich"
+                    ]
+                },
+                {
+                    "name": "WieVieleKalorienHatIntent",
+                    "slots": [
+                        {
+                            "name": "Essen",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "Kalorien von  {Essen}",
+                        "{Essen} Kalorien",
+                        "Kalorien {Essen}",
+                        "wie viel Kalorien hat {Essen}"
+                    ]
+                },
+                {
+                    "name": "WieVieleMakrosHatIntent",
+                    "slots": [
+                        {
+                            "name": "Essen",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "wie viel makronährstoffe hat eine {Essen}",
+                        "wie viele makronährstoffe hat ein {Essen}",
+                        "nährstoffe {Essen}",
+                        "nährstoffe von {Essen}",
+                        "nährwerte von {Essen}",
+                        "makros von {Essen}",
+                        "welche makros hat {Essen}",
+                        "gib mir die makros von {Essen}",
+                        "makro {Essen}",
+                        "makronährstoffe {Essen}",
+                        "makros {Essen}",
+                        "wie viele makronährstoffe hat {Essen}",
+                        "wie viel Makros hat {Essen}"
+                    ]
+                },
+                {
+                    "name": "FuegeAktivitaetHinzuIntent",
+                    "slots": [
+                        {
+                            "name": "Aktivitaet",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{Aktivitaet} möchte ich",
+                                "{Aktivitaet} will ich",
+                                "ich möchte {Aktivitaet}",
+                                "ich will {Aktivitaet}",
+                                "{Aktivitaet}"
+                            ]
+                        },
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "für den {Zeitpunkt}",
+                                "für {Zeitpunkt}",
+                                "{Zeitpunkt}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "trage aktivität ein",
+                        "trag eine neue Aktivität ein",
+                        "füge neue Aktivität ein",
+                        "ich will eine neue Aktivität eintragen",
+                        "ich möchte eine Aktivität eintragen",
+                        "füge eine neue Aktivität hinzu",
+                        "ich möchte eine neue Aktivität hinzufügen",
+                        "ich will eine Aktivität eintragen"
+                    ]
+                },
+                {
+                    "name": "RechneBMIAusIntent",
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{Gewicht} kilogramm",
+                                "{Gewicht} kilo",
+                                "{Gewicht}",
+                                "ich wie {Gewicht}",
+                                "ich wiege {Gewicht} kilo",
+                                "ich wiege {Gewicht} Kilogramm"
+                            ]
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich bin {Groesse} zentimeter",
+                                "{Groesse} zentimeter",
+                                "{Groesse}",
+                                "ich bin {Groesse} zentimeter groß"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "welchen bmi wert habe ich",
+                        "wie hoch ist der bmi von mir",
+                        "welchen bmi besitze ich",
+                        "rechne meinen body mass index",
+                        "rechne meinen bmi",
+                        "was für einen bmi habe ich",
+                        "wie hoch ist mein bmi",
+                        "welchen wert hat mein bmi",
+                        "was ist mein bmi"
+                    ]
+                },
+                {
+                    "name": "RechneFFMIAusIntent",
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich bin {Gewicht} kilo schwer",
+                                "ich wiege {Gewicht} kilogramm",
+                                "ich wiege {Gewicht} kilo",
+                                "{Gewicht}"
+                            ]
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich bin {Groesse} zentimeter groß",
+                                "ich bin {Groesse} zentimeter",
+                                "ich bin {Groesse}",
+                                "{Groesse} zentimeter",
+                                "{Groesse}"
+                            ]
+                        },
+                        {
+                            "name": "Fettanteil",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "ich habe {Fettanteil} prozent Körperfett",
+                                "{Fettanteil} prozent",
+                                "{Fettanteil}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "rechne meinen ffmi wert",
+                        "welchen ffmi habe ich",
+                        "rechne meinen ffmi",
+                        "rechne meinen fat free muscle index aus",
+                        "welchen wert hat mein ffmi",
+                        "welchen ffmi wert habe ich",
+                        "wie hoch ist mein ffmi",
+                        "was ist mein ffmi"
+                    ]
+                },
+                {
+                    "name": "ErhalteGeplanteAktivitaetIntent",
+                    "slots": [
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "{Zeitpunkt}",
+                                "für den {Zeitpunkt}",
+                                "für {Zeitpunkt}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "wie lautet meine aktuelle Aktivität",
+                        "was habe ich für {Zeitpunkt} als Aktivität geplant",
+                        "welche Aktivität steht bevor",
+                        "was ist meine aktuelle Aktivität",
+                        "welche Aktivität habe ich für {Zeitpunkt} geplant"
+                    ]
+                },
+                {
+                    "name": "ErhalteVerbrannteKalorienIntent",
+                    "slots": [
+                        {
+                            "name": "Dauer",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{Dauer}",
+                                "{Dauer} Minuten"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "wie hoch ist die zahl meiner verbrannten kalorien",
+                        "zeig mir meine verbrannten kalorien",
+                        "teile mir meine verbrannten kalorien",
+                        "kalorien verbrannt",
+                        "wie viele kalorien habe ich verbrannt"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "GENDER",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "weiblich"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "männlich"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ErhalteAufgenommeneKalorienIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1173176134465.1531928909142"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "HinzufuegenKalorienIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "kcal",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1152523910126.918937201170"
+                            }
+                        },
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "EmpfehleKalorienbedarfIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.644401529305.474964508172",
+                                "elicitation": "Elicit.Slot.581457701710.1498883592805"
+                            }
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.644401529305.1510093285340",
+                                "elicitation": "Elicit.Slot.581457701710.328861133100"
+                            }
+                        },
+                        {
+                            "name": "Alter",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.644401529305.313762593187",
+                                "elicitation": "Elicit.Slot.581457701710.1403850600721"
+                            }
+                        },
+                        {
+                            "name": "Geschlecht",
+                            "type": "GENDER",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.644401529305.350371047926",
+                                "elicitation": "Elicit.Slot.581457701710.684641218283"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "RechneBMIAusIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.47578894362.198665311980"
+                            }
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.47578894362.373581941877"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "RechneFFMIAusIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Gewicht",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.141251035116.421474287701"
+                            }
+                        },
+                        {
+                            "name": "Groesse",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.141251035116.1471213254673"
+                            }
+                        },
+                        {
+                            "name": "Fettanteil",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.141251035116.145917124150"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FuegeAktivitaetHinzuIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Aktivitaet",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1398817927734.235988987301"
+                            }
+                        },
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1398817927734.967967648998"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ErhalteGeplanteAktivitaetIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Zeitpunkt",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.558809425967.1529189883552"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ErhalteVerbrannteKalorienIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Dauer",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1012672542631.1493287493577"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1173176134465.1531928909142",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Tag möchtest du deinen aufgenommenen Kalorienbedarf wissen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1152523910126.918937201170",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wie viel Kalorien möchtest du hinzufügen"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.581457701710.1498883592805",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Damit ich dir deinen Kalorienbedarf angeben kann, brauche ich die Werte Gewicht, Größe, Alter und Geschlecht von dir. Wie viel wiegst du?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.581457701710.328861133100",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wie groß bist du in Zentimetern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.581457701710.1403850600721",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wie alt bist du?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.581457701710.684641218283",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was ist dein Geschlecht?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.47578894362.198665311980",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um deinen BMI ausrechnen zu können, brauche ich von dir dein Gewicht und deine Größe. Wie viel wiegst du?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.47578894362.373581941877",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Gib nun deine Größe in Zentimetern an."
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1339753839633.604488011321",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Du bist also {Groesse} groß?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.644401529305.474964508172",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Du wiegst also {Gewicht} kilo, stimmt das?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.644401529305.1510093285340",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Du bist also {Groesse} Zentimeter groß, ist das soweit richtig?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.644401529305.313762593187",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "{Alter} Jahre alt, stimmt das?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.644401529305.350371047926",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Du bist also {Geschlecht} , ja?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.141251035116.421474287701",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für deinen FFMI benötige ich dein Gewicht, Größe und deinen Fettanteil. Wie viel wiegst du?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.141251035116.1471213254673",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Gib nun deine Größe in Zentimetern an."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.141251035116.145917124150",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wie viel Körperfett besitzt du?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Welchen Prozentsatz hat dein Körper als Fettanteil?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1398817927734.235988987301",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welche Aktivität möchtest du eintragen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1398817927734.967967648998",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Zeitpunkt soll ich deine Aktivität eintragen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1398817927734",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ich habe für {Zeitpunkt} die Aktivität {Aktivitaet} eingetragen."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.558809425967.1529189883552",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Für welchen Zeitpunkt soll ich dir deine geplante Aktivität mitteilen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.477930795596",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "asd"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1012672542631.1493287493577",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wie viele Minuten hast du Sport getrieben?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1012672542631.12557653197",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welche Aktvitität hast du ausgeführt?"
+                    }
+                ]
+            }
+        ]
+    }
+}
